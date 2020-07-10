@@ -2,6 +2,17 @@
 ---
 cluster: "katana"
 attributes:
+  num_cores:
+    widget: "number_field"
+    label: "Number of cores"
+    value: 2
+    help: |
+      Number of cores on node type (4 GB per core unless requesting whole
+      node). Leave blank if requesting full node.
+    min: 0
+    max: 28
+    step: 1
+    id: 'num_cores'
   modules: "ood-jupyter-py/3.8.3"
   extra_jupyter_args: ""
 form:
