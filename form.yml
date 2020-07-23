@@ -14,9 +14,19 @@ attributes:
     step: 1
     id: 'num_cores'
   modules: "ood-jupyter-py/3.8.3"
+  jupyterlab_switch:
+    widget: "check_box"
+    checked_value: 1
+    unchecked_value: 0
+    value: 0
+    label: Use JupyterLab instead of Jupyter Notebook?
+    help: |
+      JupyterLab is the next generation of Jupyter with an IDE-like experience, and is completely compatible with existing Jupyter Notebooks. 
+      This is experimental and might not work.
   extra_jupyter_args: ""
 form:
   - modules
+  - jupyterlab_switch
   - extra_jupyter_args
   - bc_num_hours
   - num_cores
