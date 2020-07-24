@@ -23,11 +23,18 @@ attributes:
     help: |
       JupyterLab is the next generation of Jupyter with an IDE-like experience, and is completely compatible with existing Jupyter Notebooks. 
       This is experimental and might not work.
+  working_dir:
+    label: "Working Directory"
+    data-filepicker: true
+    data-target-file-type: dirs  # Valid values are: files, dirs, or both
+    readonly: false
+    help: "Select your project directory; defaults to $HOME"  
   extra_jupyter_args: ""
 form:
   - modules
-  - jupyterlab_switch
   - extra_jupyter_args
   - bc_num_hours
   - num_cores
+  - jupyterlab_switch  
+  - working_dir
   - bc_email_on_started
