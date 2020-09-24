@@ -7,8 +7,7 @@ attributes:
     label: "Number of cores"
     value: 2
     help: |
-      Number of cores on node type (4 GB per core unless requesting whole
-      node). Leave blank if requesting full node.
+      Number of cores on node type, 4 GB per core. 
     min: 0
     max: 28
     step: 1
@@ -22,7 +21,7 @@ attributes:
     label: Use JupyterLab instead of Jupyter Notebook?
     help: |
       JupyterLab is the next generation of Jupyter with an IDE-like experience, and is completely compatible with existing Jupyter Notebooks. 
-      This is experimental and might not work.
+      This is experimental and might not work. 
   working_dir:
     label: "Working Directory"
     data-filepicker: true
@@ -30,6 +29,7 @@ attributes:
     readonly: false
     help: "Select your project directory; defaults to $HOME"  
   extra_jupyter_args: ""
+  bc_email_on_started: 1
 form:
   - modules
   - extra_jupyter_args
